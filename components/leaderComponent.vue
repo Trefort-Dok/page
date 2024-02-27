@@ -13,7 +13,7 @@ import lCardComponent from "./lCardComponent.vue";
       <lCardComponent
         :name="'Gombos Roland'"
         :rank="'Alelnök'"
-        :imgSrc="'/gombos_roland.png'"
+        :imgSrc="'/images/leaders/gombos_roland.png'"
         :contactIcon="'/instagram.svg'"
         :contactLink="'https://www.instagram.com/roland.gombos/'"
         :contactText="'roland.gombos'"
@@ -27,7 +27,7 @@ import lCardComponent from "./lCardComponent.vue";
           <lCardComponent
             :name="'Petrovszki Gergő'"
             :rank="'Alelnök'"
-            :imgSrc="'/petrovszki_gergo.png'"
+            :imgSrc="'/images/leaders/petrovszki_gergo.png'"
             :contactIcon="'/instagram.svg'"
             :contactLink="'https://www.instagram.com/ptrvszkgrgptrk/'"
             :contactText="'ptrvszkgrgptrk'"
@@ -36,7 +36,7 @@ import lCardComponent from "./lCardComponent.vue";
             <lCardComponent
               :name="'Kucsa Dávid'"
               :rank="'Elnök'"
-              :imgSrc="'/kucsa_david.png'"
+              :imgSrc="'/images/leaders/kucsa_david.png'"
               :contactIcon="'/instagram.svg'"
               :contactLink="'https://www.instagram.com/ddvokcs/'"
               :contactText="'ddvokcs'"
@@ -45,7 +45,7 @@ import lCardComponent from "./lCardComponent.vue";
           <lCardComponent
             :name="'Kovács Levente'"
             :rank="'Alelnök'"
-            :imgSrc="'/kovacs_levente.png'"
+            :imgSrc="'/images/leaders/kovacs_levente.png'"
             :contactIcon="'/instagram.svg'"
             :contactLink="'https://www.instagram.com/levente__kovacs/'"
             :contactText="'levente__kovacs'"
@@ -55,7 +55,7 @@ import lCardComponent from "./lCardComponent.vue";
       <lCardComponent
         :name="'Rácz Attila'"
         :rank="'Segítő tanár'"
-        :imgSrc="'/racz_attila.png'"
+        :imgSrc="'/images/leaders/racz_attila.png'"
         :contactIcon="'/facebook-f.svg'"
         :contactLink="'https://www.facebook.com/attila.racz.946/'"
         :contactText="'attila.racz.946'"
