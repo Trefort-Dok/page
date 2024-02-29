@@ -8,6 +8,7 @@ useHead({
 
 <template>
   <div>
+    <div style="height: 100vh;"></div>
     <LeaderComponent />
   </div>
 </template>

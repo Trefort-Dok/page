@@ -19,23 +19,18 @@ const props = defineProps({
 </script>
 
 <template>
-  <DevOnly>
-    <div :id="'cardWrapper'">
-      <div
-        :id="'cardImage'"
-        :style="{ backgroundImage: `url(${props.imgSrc})` }"
-      >
-        <div :id="'cardInner'">
-          <h3 :id="'cardInnerName'">{{ props.name }}</h3>
-          <div :id="'cardInnerRank'">{{ props.rank }}</div>
-        </div>
+  <div :id="'cardWrapper'" :class="'card'">
+    <div :id="'cardImage'" :style="{ backgroundImage: `url(${props.imgSrc})` }">
+      <div :id="'cardInner'">
+        <h3 :id="'cardInnerName'">{{ props.name }}</h3>
+        <span :id="'cardInnerRank'">{{ props.rank }}</span>
       </div>
-      <a :id="'contactLink'" :href="props.contactLink" :target="'_blank'">
-        <img :src="props.contactIcon" :alt="'Instagram'" />
-        <div :id="'contactText'">{{ props.contactText }}</div>
-      </a>
     </div>
-  </DevOnly>
+    <a :id="'contactLink'" :href="props.contactLink" :target="'_blank'">
+      <img :src="props.contactIcon" :alt="'Instagram'" />
+      <span :id="'contactText'">{{ props.contactText }}</span>
+    </a>
+  </div>
 </template>
 
 <style scoped>
@@ -63,12 +58,16 @@ a {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  width: 276.83px;
+  width: 220px;
   height: 329.63px;
   padding: 1rem;
   color: white;
   border-radius: 30px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#cardWrapper:nth-child(2) {
+  margin-top: 4rem;
 }
 
 #cardImage {
@@ -78,6 +77,7 @@ a {
   border-radius: 20px 20px 10px 10px;
   background-repeat: no-repeat no-repeat;
   background-size: cover;
+  background-position: top;
 }
 
 #cardInner {
@@ -120,5 +120,11 @@ a {
   padding: 0px 4px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #cardWrapper:nth-child(2) {
+    margin-top: 0rem;
+  }
 }
 </style>
