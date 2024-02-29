@@ -1,5 +1,68 @@
 <script lang="ts">
 import lCardComponent from "./lCardComponent.vue";
+
+export default {
+  data() {
+    return {
+      hoveredIndex: -1,
+      leaders: [
+        {
+          name: 'Gombos Roland',
+          rank: 'Alelnök',
+          imgSrc: '/images/leaders/gombos_roland.png',
+          contactIcon: '/instagram.svg',
+          contactLink: 'https://www.instagram.com/roland.gombos/',
+          contactText: 'roland.gombos'
+        },
+        {
+          name: 'Petrovszki Gergő',
+          rank: 'Alelnök',
+          imgSrc: '/images/leaders/petrovszki_gergo.png',
+          contactIcon: '/instagram.svg',
+          contactLink: 'https://www.instagram.com/ptrvszkgrgptrk/',
+          contactText: 'ptrvszkgrgptrk'
+        },
+        {
+          name: 'Kucsa Dávid',
+          rank: 'Elnök',
+          imgSrc: '/images/leaders/kucsa_david.png',
+          contactIcon: '/instagram.svg',
+          contactLink: 'https://www.instagram.com/ddvokcs/',
+          contactText: 'ddvokcs'
+        },
+        {
+          name: 'Kovács Levente',
+          rank: 'Alelnök',
+          imgSrc: '/images/leaders/kovacs_levente.png',
+          contactIcon: '/instagram.svg',
+          contactLink: 'https://www.instagram.com/levente__kovacs/',
+          contactText: 'levente__kovacs'
+        },
+        {
+          name: 'Rácz Attila',
+          rank: 'Segítő tanár',
+          imgSrc: '/images/leaders/racz_attila.png',
+          contactIcon: '/facebook-f.svg',
+          contactLink: 'https://www.facebook.com/attila.racz.946/',
+          contactText: 'attila.racz.946'
+        }
+      ]
+    };
+  },
+
+  methods: {
+    handleCardHover(index: number) {
+      this.hoveredIndex = index;
+    },
+    handleCardLeave() {
+      this.hoveredIndex = -1;
+    },
+    cardOpacity(index: number) {
+      return this.hoveredIndex === -1 || this.hoveredIndex === index ? 1 : 0.75;
+    }
+  }
+};
+
 </script>
 
 <template>
@@ -12,30 +75,18 @@ import lCardComponent from "./lCardComponent.vue";
         Osszátok meg velünk gondolataitokat, és biztosak lehettek benne, hogy
         minden tőlünk telhetőt megteszünk a helyzet javítása érdekében. 😉
       </div>
-      <div class="cardContainer1 cardContainer">
-        <lCardComponent :name="'Gombos Roland'" :rank="'Alelnök'" :imgSrc="'/images/leaders/gombos_roland.png'"
-          :contactIcon="'/instagram.svg'" :contactLink="'https://www.instagram.com/roland.gombos/'"
-          :contactText="'roland.gombos'" />
-      </div>
-      <div class="cardContainer2 cardContainer">
-        <lCardComponent :name="'Petrovszki Gergő'" :rank="'Alelnök'" :imgSrc="'/images/leaders/petrovszki_gergo.png'"
-          :contactIcon="'/instagram.svg'" :contactLink="'https://www.instagram.com/ptrvszkgrgptrk/'"
-          :contactText="'ptrvszkgrgptrk'" />
-      </div>
-      <div class="cardContainer3 cardContainer">
-        <lCardComponent :name="'Kucsa Dávid'" :rank="'Elnök'" :imgSrc="'/images/leaders/kucsa_david.png'"
-          :contactIcon="'/instagram.svg'" :contactLink="'https://www.instagram.com/ddvokcs/'" :contactText="'ddvokcs'" />
-      </div>
-      <div class="cardContainer4 cardContainer">
-        <lCardComponent :name="'Kovács Levente'" :rank="'Alelnök'" :imgSrc="'/images/leaders/kovacs_levente.png'"
-          :contactIcon="'/instagram.svg'" :contactLink="'https://www.instagram.com/levente__kovacs/'"
-          :contactText="'levente__kovacs'" />
-      </div>
-      <div class="cardContainer5 cardContainer">
-        <lCardComponent :name="'Rácz Attila'" :rank="'Segítő tanár'" :imgSrc="'/images/leaders/racz_attila.png'"
-          :contactIcon="'/facebook-f.svg'" :contactLink="'https://www.facebook.com/attila.racz.946/'"
-          :contactText="'attila.racz.946'" />
-      </div>
+      <lCardComponent 
+          v-for="(leader, index) in leaders"
+          :key="index" :name="leader.name"
+          :rank="leader.rank"
+          :imgSrc="leader.imgSrc" 
+          :contactIcon="leader.contactIcon"
+          :contactLink="leader.contactLink"
+          :contactText="leader.contactText"
+          @mouseover="handleCardHover(index)" 
+          @mouseleave="handleCardLeave"
+          :class="'cardContainer cardContainer' + (index + 1)"
+          :style="{ 'transform': index === hoveredIndex ? 'scale(1) rotateZ(1.25deg)' : 'scale(.85)', 'opacity': cardOpacity(index), }" />
     </div>
   </div>
 </template>
@@ -43,14 +94,8 @@ import lCardComponent from "./lCardComponent.vue";
 <script lang="ts" setup></script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-
 #leaderWrapper {
   margin: 0 auto;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .container {
@@ -64,6 +109,11 @@ import lCardComponent from "./lCardComponent.vue";
     ". cardContainer2 cardContainer3 cardContainer4 .";
   width: min-content;
   margin: 0 auto;
+}
+
+.cardContainer {
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(.09, 1.25, .99, 1.03);
 }
 
 .titleContainer {
@@ -86,8 +136,6 @@ import lCardComponent from "./lCardComponent.vue";
 .cardContainer4,
 .cardContainer5 {
   padding: 1rem;
-  transform: scale(1);
-  opacity: 1;
 }
 
 .cardContainer1 {

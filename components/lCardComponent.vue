@@ -49,9 +49,14 @@ a {
   width: 146px;
   height: 32px;
   border: 1px solid #1e004b;
-  padding: 4px 12px;
+  padding: 4px 24px;
   margin: 0 auto;
   border-radius: 50px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+a:hover {
+  background-color: rgba(69, 29, 227, .05);
 }
 
 #cardWrapper {
