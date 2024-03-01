@@ -57,12 +57,14 @@ export default {
     handleCardLeave() {
       this.hoveredIndex = -1;
     },
-    cardOpacity(index: number) {
+    handleOpacity(index: number) {
       return this.hoveredIndex === -1 || this.hoveredIndex === index ? 1 : 0.75;
+    },
+    handleTransform(index: number) {
+      return this.hoveredIndex === -1 || this.hoveredIndex === index ? '0deg' : index + (index * 0.5) + 'deg';
     }
   }
 };
-
 </script>
 
 <template>
@@ -86,12 +88,10 @@ export default {
           @mouseover="handleCardHover(index)" 
           @mouseleave="handleCardLeave"
           :class="'cardContainer cardContainer' + (index + 1)"
-          :style="{ 'transform': index === hoveredIndex ? 'scale(1) rotateZ(1.25deg)' : 'scale(.85)', 'opacity': cardOpacity(index), }" />
+          :style="{ 'transform': index === hoveredIndex ? 'scale(1) rotateZ(1.25deg)' : 'scale(.85) ' + 'rotateZ(' + handleTransform(index) + ')', 'opacity': handleOpacity(index),  }" />
     </div>
   </div>
 </template>
-
-<script lang="ts" setup></script>
 
 <style scoped>
 #leaderWrapper {
@@ -113,7 +113,7 @@ export default {
 
 .cardContainer {
   cursor: pointer;
-  transition: all 300ms cubic-bezier(.09, 1.25, .99, 1.03);
+  transition: all 300ms cubic-bezier(0,1.53,1,.99) 50ms;
 }
 
 .titleContainer {
@@ -162,7 +162,7 @@ export default {
   grid-area: cardContainer5;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1260px) {
   .container {
     gap: 6px 0px;
     grid-template-areas:

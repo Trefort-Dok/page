@@ -68,7 +68,11 @@ a:hover {
   padding: 1rem;
   color: white;
   border-radius: 30px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, .25) 0px 2px 8px 0px;
+}
+
+#cardWrapper:hover {
+  box-shadow: rgba(69, 29, 227, .25) 0px 2px 8px 0px;
 }
 
 #cardWrapper:nth-child(2) {
