@@ -43,20 +43,15 @@ h3 {
 }
 
 a {
-  color: rgba(30, 0, 75, 1);
+  color: var(--clr-dark-purple);
   text-align: center;
   cursor: pointer;
   width: 146px;
   height: 32px;
-  border: 1px solid #1e004b;
+  border: 1px solid var(--clr-dark-purple);
   padding: 4px 24px;
   margin: 0 auto;
   border-radius: 50px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-a:hover {
-  background-color: rgba(69, 29, 227, .05);
 }
 
 #cardWrapper {
@@ -68,11 +63,7 @@ a:hover {
   padding: 1rem;
   color: white;
   border-radius: 30px;
-  box-shadow: rgba(99, 99, 99, .25) 0px 2px 8px 0px;
-}
-
-#cardWrapper:hover {
-  box-shadow: rgba(69, 29, 227, .25) 0px 2px 8px 0px;
+  box-shadow: #63636340 0px 2px 8px 0px;
 }
 
 #cardWrapper:nth-child(2) {
@@ -108,7 +99,7 @@ a:hover {
 }
 
 #cardInnerRank {
-  color: #451de3;
+  color: var(--clr-main-purple);
   size: 16px;
 }
 
