@@ -3,6 +3,7 @@
   <main>
     <NavbarComponent />
     <TitleComponent />
+    <LeaderComponent />
   </main>
 </template>
 
