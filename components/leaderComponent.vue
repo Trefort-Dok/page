@@ -1,6 +1,4 @@
 <script lang="ts">
-import lCardComponent from "./lCardComponent.vue";
-
 export default {
   data() {
     return {
@@ -10,7 +8,7 @@ export default {
           name: 'Gombos Roland',
           rank: 'Alelnök',
           imgSrc: '/images/leaders/gombos_roland.png',
-          contactIcon: '/instagram.svg',
+          contactIcon: '/public/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/roland.gombos/',
           contactText: 'roland.gombos'
         },
@@ -18,7 +16,7 @@ export default {
           name: 'Petrovszki Gergő',
           rank: 'Alelnök',
           imgSrc: '/images/leaders/petrovszki_gergo.png',
-          contactIcon: '/instagram.svg',
+          contactIcon: '/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/ptrvszkgrgptrk/',
           contactText: 'ptrvszkgrgptrk'
         },
@@ -26,7 +24,7 @@ export default {
           name: 'Kucsa Dávid',
           rank: 'Elnök',
           imgSrc: '/images/leaders/kucsa_david.png',
-          contactIcon: '/instagram.svg',
+          contactIcon: '/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/ddvokcs/',
           contactText: 'ddvokcs'
         },
@@ -34,7 +32,7 @@ export default {
           name: 'Kovács Levente',
           rank: 'Alelnök',
           imgSrc: '/images/leaders/kovacs_levente.png',
-          contactIcon: '/instagram.svg',
+          contactIcon: '/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/levente__kovacs/',
           contactText: 'levente__kovacs'
         },
@@ -42,7 +40,7 @@ export default {
           name: 'Rácz Attila',
           rank: 'Segítő tanár',
           imgSrc: '/images/leaders/racz_attila.png',
-          contactIcon: '/facebook-f.svg',
+          contactIcon: '/svg/facebook-f.svg',
           contactLink: 'https://www.facebook.com/attila.racz.946/',
           contactText: 'attila.racz.946'
         }
@@ -61,7 +59,7 @@ export default {
       return this.hoveredIndex === -1 || this.hoveredIndex === index ? 1 : 0.75;
     },
     handleTransform(index: number) {
-      return this.hoveredIndex === -1 || this.hoveredIndex === index ? '0deg' : index + (index * 0.5) + 'deg';
+      return this.hoveredIndex === -1 || this.hoveredIndex === index ? '0deg' : index + (index * 0.2) + 'deg';
     }
   }
 };
@@ -71,7 +69,7 @@ export default {
   <div :id="'leaderWrapper'" :class="'parent'">
     <div class="container">
       <div class="titleContainer">
-        <img src="/leaderTitle.svg" />
+        <img src="/svg/leaderTitle.svg" />
       </div>
       <div class="motivationTextContainer">
         Osszátok meg velünk gondolataitokat, és biztosak lehettek benne, hogy
