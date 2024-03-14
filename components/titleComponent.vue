@@ -9,7 +9,7 @@
 </template>
 
 <style scoped>
-img {
+img[moveable] {
     width: 300px;
 }
 
@@ -18,18 +18,29 @@ section {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
     width: 100vw;
     height: 80vh;
 }
-
-h1 {
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-    position: relative;
-    z-index: 10;
-    color: var(--clr-main-purple);
+img[moveable]   {
+    position: absolute;
+    box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.15);
 }
-
+section img:nth-child(2n){
+    top: 50%;
+}
+section img:nth-child(2){
+    left: 20%;
+    transform: rotate(-10deg) translate(-50%, -50%);
+}
+section img:nth-child(3){
+    left: 50%;
+    transform: rotate(5deg) translate(-50%, -50%);
+}
+section img:nth-child(4){
+    right: 1%;
+    transform: rotate(-13deg) translate(-50%, -50%);
+}
 
 #title {
     position: absolute;
@@ -37,5 +48,6 @@ h1 {
     top: 50%;
     width: 890.622px;
     transform: translate(-50%, -50%);
+    z-index: 99;
 }
 </style>
