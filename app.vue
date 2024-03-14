@@ -1,12 +1,5 @@
-<script lang="ts" setup>
-import LeaderComponent from "./components/leaderComponent.vue";
-
-useHead({
-  title: "Trefort Diákönkormányzat"
-})
-</script>
-
 <template>
+  <Title>Trefort Diákönkormányzat</Title>
   <div>
     <DevOnly>
       <div style="height: 100vh;"></div>
