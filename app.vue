@@ -1,5 +1,20 @@
 <template>
+  <Title>Trefort Diákönkormányzat</Title>
   <div>
-    <NuxtWelcome />
+    <DevOnly>
+      <div style="height: 100vh;"></div>
+    </DevOnly>
+    <LeaderComponent />
   </div>
 </template>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
