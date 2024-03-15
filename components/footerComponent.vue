@@ -1,7 +1,5 @@
-<!-- FIXME: Ekezeteket ki kell fixalnod, ugyanis amcsi keyboard ❤️ -->
 <template>
   <div :id="'footerWrapper'">
-    <!-- FIXME: Valami normalis nevet ennek az img tag-nek -->
     <img :id="'titleSvg'" src="/titles/trefort.svg" alt="Trefort">
     <div :id="'container'">
       <div :class="'externalLinks'">
@@ -10,27 +8,27 @@
             alt="Nyil"></a>
       </div>
       <div :class="'socialLinks'">
-        <a :class="'customLinks'" href="" target="_blank">
+        <a :class="'customLinks'" href="https://www.instagram.com/trefortdok/" target="_blank">
           <img src="/svg/instagram.svg" alt="Instagram" />
           trefortdok
         </a>
-        <a :class="'customLinks'" href="" target="_blank">
+        <a :class="'customLinks'" href="https://www.facebook.com/bszctrefort" target="_blank">
           <img src="/svg/facebook-f.svg" alt="Facebook" />
           bszc_trefort
         </a>
-        <a :class="'customLinks'" href="" target="_blank">
+        <a :class="'customLinks'" href="https://www.tiktok.com/@bszc_trefort" target="_blank">
           <img src="/svg/tiktok.svg" alt="Tiktok" />
           bszc_trefort
         </a>
       </div>
       <div :class="'timetableLinks'">
-        <a :class="'a__timetableLinks'" href="https://taszi.edupage.org/" target="_blank">Hivatalos órarend <img
+        <a :class="'a__timetableLinks'" href="https://taszi.edupage.org/timetable/" target="_blank">Hivatalos órarend <img
             src="/svg/arrow-up-right2.svg" alt="Nyil"></a>
         <a :class="'a__timetableLinks'" href="https://taszi.edupage.org/substitution/" target="_blank">Helyettesítés <img
             src="/svg/arrow-up-right2.svg" alt="Nyil"></a>
       </div>
       <div :class="'schoolAddress'">
-        <p :class="'darkPurple'">5600 Békéscsaba, Puskin tér 1.</p>
+        <a :class="'darkPurple'" href="https://maps.app.goo.gl/Pf5A9wK5vziyRPSy5" target="_blank"><u>5600 Békéscsaba, Puskin tér 1.</u></a>
         <br />
         <span>Békéscsabai Szakképzési Centrum
           Trefort Ágoston Technikum, Szakképző Iskola és Kollégium</span>
@@ -40,7 +38,6 @@
   </div>
 </template>
 
-<!-- FIXME: Kaosz ami itt van, kerlek szepen ha tudod minifyold le, koszi ♿ -->
 <style scoped>
 :root {
   --clr-main-purple: #451DE3;
@@ -127,6 +124,7 @@ a {
 @media only screen and (max-width: 1260px) {
   #footerWrapper {
     margin-top: 6rem;
+    padding-bottom: 3rem;
   }
 
   #container {

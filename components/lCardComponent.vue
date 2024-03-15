@@ -34,6 +34,14 @@ const props = defineProps({
 </template>
 
 <style scoped>
+:root {
+  --clr-main-purple: #451DE3;
+  --clr-dark-purple: #1E004B;
+  --clr-secondary-purple: #6D5E84;
+  --clr-gray-text: #8F8F8F;
+  --clr-bg-color: #F7F8FD;
+}
+
 a,
 h3 {
   text-decoration: none;
