@@ -22,19 +22,27 @@
         </a>
       </div>
       <div :class="'timetableLinks'">
-        <a :class="'a__timetableLinks'" href="https://taszi.edupage.org/timetable/" target="_blank">Hivatalos órarend <img
-            src="/svg/arrow-up-right2.svg" alt="Nyil"></a>
-        <a :class="'a__timetableLinks'" href="https://taszi.edupage.org/substitution/" target="_blank">Helyettesítés <img
-            src="/svg/arrow-up-right2.svg" alt="Nyil"></a>
+        <a :class="'a__timetableLinks'" href="https://taszi.edupage.org/timetable/" target="_blank">Hivatalos órarend
+          <img src="/svg/arrow-up-right2.svg" alt="Nyil"></a>
+        <a :class="'a__timetableLinks'" href="https://taszi.edupage.org/substitution/" target="_blank">Helyettesítés
+          <img src="/svg/arrow-up-right2.svg" alt="Nyil"></a>
       </div>
       <div :class="'schoolAddress'">
-        <a :class="'darkPurple'" href="https://maps.app.goo.gl/Pf5A9wK5vziyRPSy5" target="_blank"><u>5600 Békéscsaba, Puskin tér 1.</u></a>
+        <a :class="'darkPurple'" href="https://maps.app.goo.gl/Pf5A9wK5vziyRPSy5" target="_blank"><u>5600 Békéscsaba,
+            Puskin tér 1.</u></a>
         <br />
         <span>Békéscsabai Szakképzési Centrum
           Trefort Ágoston Technikum, Szakképző Iskola és Kollégium</span>
       </div>
     </div>
-    <!-- TODO: designer kredit -->
+    <div :id="'footerCopyright'">
+      <img src="/svg/opes-logo.svg" alt="Opes Design">
+      <div :id="'footerCopyrightInner'">
+        Designed by <a href="https://opes.hu/" target="_blank"><span :class="'mainPurple'">Opes </span>
+          <img src="/svg/arrow-up-right.svg" alt="Nyil">
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -61,7 +69,6 @@ a {
 }
 
 #container {
-  height: 300px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -69,6 +76,20 @@ a {
   grid-template-columns: repeat(4, 1fr);
   width: calc(100vw - 180px);
   gap: 1rem;
+  height: min-content;
+  padding: 4rem 0rem;
+}
+
+#footerCopyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding-bottom: 1rem;
+}
+
+#footerCopyrightInner {
+  margin-left: 1rem;
 }
 
 #titleSvg {
@@ -84,6 +105,10 @@ a {
 
 .darkPurple {
   color: var(--clr-dark-purple)
+}
+
+.mainPurple {
+  color: var(--clr-main-purple);
 }
 
 .socialLinks {
@@ -127,15 +152,23 @@ a {
     padding-bottom: 3rem;
   }
 
+  #footerCopyright {
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    margin: 0 auto;
+  }
+
   #container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
       "externalLinks"
-      "socialLinks"
       "timetableLinks"
+      "socialLinks"
       "schoolAddress";
     gap: 2rem;
     text-align: center;
+    min-height: fit-content;
+    padding: 2rem 0rem;
   }
 
   #container {
