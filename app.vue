@@ -4,9 +4,7 @@
     <NavbarComponent />
     <TitleComponent />
     <LeaderComponent />
-    <DevOnly>
-      <FooterComponent />
-    </DevOnly>
+    <FooterComponent />
   </main>
 </template>
 
