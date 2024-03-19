@@ -1,3 +1,29 @@
-## This project using [Nuxt v3](https://nuxt.com)
+# Trefort DÖK - Hivatalos Github Repository
 
-Personally I'm using [Conventional Commits](https://www.conventionalcommits.org/), [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)<br/>For git related: [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens), [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+<b>Ez a projekt az alábbi frameworkkel működik: [Nuxt v3](https://nuxt.com/)</b>
+
+<span style="font-size: 24px;">© Projekt másolatának keszítése</span>
+<b>
+```git
+git clone https://github.com/Trefort-Dok/page.git
+```
+</b>
+<br />
+
+<span style="font-size: 24px;">📕 Szükséges NPM csomagok telepítése <i><span style="font-size: 14px;">(minden csomag a package.json-ben található)</span></i></span>
+<b>
+```cmd
+npm install
+```
+</b>
+<br />
+
+<span style="font-size: 24px;">🌐 Fejlesztői környezet elindítása</span>
+
+```
+npm run dev
+```
+<br />
+
+----
+💖 A weboldal az alabbi linket lesz elerhető: <b>[localhost:3000](http://localhost:3000)</b>
