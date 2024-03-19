@@ -19,10 +19,11 @@ npm install
 <br />
 
 <span style="font-size: 24px;">🌐 Fejlesztői környezet elindítása</span>
-
+<b>
 ```
 npm run dev
 ```
+</b>
 <br />
 
 ----
