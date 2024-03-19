@@ -4,7 +4,6 @@
         <img moveable id="stabImg" class="rounded-30" src="/img/stab.bmp?url" alt="stab">
         <img moveable id="lolImg" class="rounded-30" src="/img/lol.bmp?url" alt="lol">
         <img moveable id="kotelImg" class="rounded-30" src="/img/kotel.bmp?url" alt="kotel">
-
     </section>
 </template>
 

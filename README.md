@@ -1,0 +1,3 @@
+## This project using [Nuxt v3](https://nuxt.com)
+
+Personally I'm using [Conventional Commits](https://www.conventionalcommits.org/), [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)<br/>For git related: [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens), [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)

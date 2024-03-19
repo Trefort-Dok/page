@@ -7,15 +7,15 @@ export default {
         {
           name: 'Gombos Roland',
           rank: 'Alelnök',
-          imgSrc: '/images/leaders/gombos_roland.png',
-          contactIcon: '/public/svg/instagram.svg',
+          imgSrc: '/img/leaders/gombos_roland.png',
+          contactIcon: '/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/roland.gombos/',
           contactText: 'roland.gombos'
         },
         {
           name: 'Petrovszki Gergő',
           rank: 'Alelnök',
-          imgSrc: '/images/leaders/petrovszki_gergo.png',
+          imgSrc: '/img/leaders/petrovszki_gergo.png',
           contactIcon: '/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/ptrvszkgrgptrk/',
           contactText: 'ptrvszkgrgptrk'
@@ -23,7 +23,7 @@ export default {
         {
           name: 'Kucsa Dávid',
           rank: 'Elnök',
-          imgSrc: '/images/leaders/kucsa_david.png',
+          imgSrc: '/img/leaders/kucsa_david.png',
           contactIcon: '/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/ddvokcs/',
           contactText: 'ddvokcs'
@@ -31,7 +31,7 @@ export default {
         {
           name: 'Kovács Levente',
           rank: 'Alelnök',
-          imgSrc: '/images/leaders/kovacs_levente.png',
+          imgSrc: '/img/leaders/kovacs_levente.png',
           contactIcon: '/svg/instagram.svg',
           contactLink: 'https://www.instagram.com/levente__kovacs/',
           contactText: 'levente__kovacs'
@@ -39,7 +39,7 @@ export default {
         {
           name: 'Rácz Attila',
           rank: 'Segítő tanár',
-          imgSrc: '/images/leaders/racz_attila.png',
+          imgSrc: '/img/leaders/racz_attila.png',
           contactIcon: '/svg/facebook-f.svg',
           contactLink: 'https://www.facebook.com/attila.racz.946/',
           contactText: 'attila.racz.946'
