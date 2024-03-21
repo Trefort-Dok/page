@@ -26,4 +26,4 @@ npm run dev
 <br />
 
 ----
-💖 A weboldal az alábbi linken lesz elerhető: <b>[localhost:3000](http://localhost:3000)</b>
+💖 A weboldal az alábbi linken lesz elérhető: <b>[localhost:3000](http://localhost:3000)</b>
