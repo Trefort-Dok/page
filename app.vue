@@ -1,12 +1,19 @@
 <template>
   <Title>Trefort Diákönkormányzat</Title>
   <main>
-    <NavbarComponent />
-    <TitleComponent />
-    <LeaderComponent />
+    <NavbarComponent :nav-items="navbar" />
+    <TitleComponent id="homePage" />
+    <LeaderComponent data-aos="fade-up" id="leaders" />
     <FooterComponent />
   </main>
 </template>
+
+<script lang="ts" setup>
+const navbar = [
+  {title: 'Kezdőlap', id: 'homePage'},
+  {title: 'Vezetőség', id: 'leaders'},
+  ]
+</script>
 
 <style scoped>
 main {
@@ -41,6 +48,8 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
+
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -51,12 +60,4 @@ h1 {
   border-radius: 30px;
 }
 
-a {
-  text-decoration: none;
-  color: var(--clr-secondary-purple);
-}
-
-a.active {
-  color: var(--clr-main-purple);
-}
 </style>
